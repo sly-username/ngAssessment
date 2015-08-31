@@ -7,12 +7,12 @@ angular.module( 'starsApp.controllers' )
       if ( $scope.handle !== undefined && $scope.password !== undefined ) {
         User.save( {}, { user: $scope.handle, password: $scope.password }).$promise
           .then( function() {
-            Auth.isLogged = true;
+            Auth.isLoggedIn = true;
             $rootScope.loggedInUser = $scope.handle;
             console.log( 'user is logged in' );
             $location.path( '/home' );
           }).catch( function( status, data ) {
-            Auth.isLogged = false;
+            Auth.isLoggedIn = false;
             $rootScope.loggedInUser = null;
             console.log( status );
             console.log( data );
@@ -21,9 +21,9 @@ angular.module( 'starsApp.controllers' )
     };
 
     $scope.logout = function logout() {
-      if ( Auth.isLogged ) {
+      if ( Auth.isLoggedIn ) {
         console.log( 'user signed out' );
-        Auth.isLogged = false;
+        Auth.isLoggedIn = false;
         $rootScope.loggedInUser = null;
         $location.path( '/login' );
       }

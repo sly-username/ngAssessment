@@ -1,11 +1,11 @@
 angular.module( 'starsApp.services' )
-  .factory( 'Auth', function(){
+  .factory( 'Auth', [ '$state', 'User', function( $state, User ){
     var auth = {
-      isLogged: false
+      isLoggedIn: false
     };
 
     return auth;
-  })
+  }])
 
   .factory( 'User', function( $resource ) {
 
