@@ -17,7 +17,7 @@ var users={
 };
 var msgs=[
     {user:"kilroy", phone: "123 555 1212", message:"was here!"}
-]
+];
 
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -57,12 +57,12 @@ function propSort(prop) {
 }
 
 app.get('/states/abbreviations', function(request, response) {
-    var result = []
+    var result = [];
     for (var ind=0; ind<states.length; ind++) {
         result.push(states[ind].abbreviation)
     }
     response.json(result);
-})
+});
 
 app.get('/states/:abbrev', function(request, response) {
     var abbrev = request.params.abbrev;
