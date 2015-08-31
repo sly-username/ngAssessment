@@ -1,0 +1,20 @@
+guestbook form view
+<form role='form'>
+  <div class='form-group'>
+    <label for='telephone'>Phone Number</label>
+    <div>
+      <input type='tel' id='telephone' placeholder='Phone Number' ng-model='telephone'>
+    </div>
+  </div>
+  <div class='form-group'>
+    <label for='bookMessage'>Message</label>
+    <div>
+      <input type='text' id='bookMessage' placeholder='Message' ng-model='message'>
+    </div>
+  </div>
+  <div class='form-group'>
+    <div>
+      <button type='submit' class='btn' ng-click='savePost()'>Save</button>
+    </div>
+  </div>
+</form>

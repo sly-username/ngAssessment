@@ -2,7 +2,7 @@
 <html>
 <head lang='en'>
   <meta charset='UTF-8'>
-  <base href="/">
+  <base href='/'>
   <title>Murica</title>
   <script src='bower_components/angular/angular.js'></script>
   <script src='bower_components/angular-resource/angular-resource.js'></script>
@@ -14,11 +14,11 @@
 
 <nav class='navbar' role='navigation'>
   <ul class='nav navbar-nav'>
-    <li><a ui-sref="home">Home</a></li>
+    <li><a ui-sref='home'>Home</a></li>
     <li><a ui-sref='search'>Search</a></li>
     <li><a ui-sref='guestbook'>Guest Book</a></li>
-    <li><a ui-sref="login">Login</a></li>
-    <li><a ui-sref="logout">Log Out</a></li>
+    <li><a ui-sref='login'>Login</a></li>
+    <li><a ui-sref='logout'>Log Out</a></li>
   </ul>
 </nav>
 
@@ -31,5 +31,7 @@
 <script src='components/authentication/auth.controller.js'></script>
 <script src='components/authentication/auth.service.js'></script>
 <script src='components/home/home.controller.js'></script>
+<script src='components/guestbook/guestbook.controller.js'></script>
+<script src='components/guestbook/guestbook.service.js'></script>
 </body>
 </html>

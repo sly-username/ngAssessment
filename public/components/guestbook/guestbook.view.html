@@ -1,0 +1,16 @@
+<div ui-view='form'></div>
+
+<table>
+  <tr ng-repeat='guest in guestbook'>
+
+    <td>
+      Message: {{guest.message}}
+    </td>
+    <td>
+      User: {{guest.user}}
+    </td>
+    <td>
+      Phone: {{guest.phone}}
+    </td>
+  </tr>
+</table>
