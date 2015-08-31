@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'starsApp.controllers' )
+angular.module( 'statesApp.controllers' )
   .controller( 'HomeController', [ '$scope', HomeController ]);
 
 function HomeController ( ) {

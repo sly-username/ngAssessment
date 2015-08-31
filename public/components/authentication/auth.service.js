@@ -1,4 +1,4 @@
-angular.module( 'starsApp.services' )
+angular.module( 'statesApp.services' )
   .factory( 'Auth', [ '$state', 'User', function( $state, User ){
     var auth = {
       isLoggedIn: false

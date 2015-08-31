@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module( 'starsApp', [ 'ui.router', 'ngResource', 'starsApp.controllers', 'starsApp.services' ])
+  .module( 'statesApp', [ 'ui.router', 'ngResource', 'statesApp.controllers', 'statesApp.services' ])
   .config( function( $stateProvider, $urlRouterProvider ) {
 
     $urlRouterProvider.otherwise( '/login' );
@@ -44,6 +44,21 @@ angular
         authenticate: false
       })
 
+      .state( 'states', {
+        url: '/states',
+        views: {
+          '': {
+            templateUrl: 'components/states/states.view.html',
+            controller: 'StatesController'
+          },
+          'individual@states': {
+            templateUrl: 'components/states/states.individual.view.html',
+            controller: 'StatesController'
+          }
+        },
+        authenticate: false
+      })
+
       .state( 'login', {
         url: '/login',
         templateUrl: 'components/authentication/login.view.html',
@@ -72,7 +87,7 @@ angular
 
 
 angular
-  .module( 'starsApp.controllers', [ 'starsApp.services' ]);
+  .module( 'statesApp.controllers', [ 'statesApp.services' ]);
 
 angular
-  .module( 'starsApp.services', []);
+  .module( 'statesApp.services', []);

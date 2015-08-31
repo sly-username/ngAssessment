@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'starsApp.controllers' )
+angular.module( 'statesApp.controllers' )
   .controller( 'GuestbookController', [ '$scope', 'Book', 'Publish', function( $scope, Book, Publish ) {
 
     $scope.guestbook = Book.query();

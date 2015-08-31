@@ -1,4 +1,4 @@
-angular.module( 'starsApp.services' )
+angular.module( 'statesApp.services' )
   .factory( 'Book', function( $resource ) {
 
     return $resource( '/read' );

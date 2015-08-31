@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'starsApp.controllers' )
+angular.module( 'statesApp.controllers' )
   .controller( 'AuthController', [ '$scope', '$location', '$rootScope', 'Auth', 'User', function( $scope, $location, $rootScope, Auth, User ) {
 
     $scope.logIn = function logIn() {
