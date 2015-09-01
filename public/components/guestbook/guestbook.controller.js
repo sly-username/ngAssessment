@@ -6,7 +6,7 @@ angular.module( 'statesApp.controllers' )
     $scope.guestbook = Book.query();
 
     $scope.savePost = function savePost() {
-      Publish.save({}, { phone: $scope.telephone, message: $scope.message }).$promise
+      Publish.create({}, { phone: $scope.telephone, message: $scope.message }).$promise
         .then( function ( response ) {
         $scope.message = response.message;
         $scope.phone = response.phone;

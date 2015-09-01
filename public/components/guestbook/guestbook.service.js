@@ -4,5 +4,11 @@ angular.module( 'statesApp.services' )
     return $resource( '/read' );
   })
   . factory ( 'Publish', function( $resource ) {
-    return $resource( '/write' );
-  });
+    return $resource( '/write', {}, {
+      create:
+      {
+        method: 'POST',
+        isArray: true
+      }
+    });
+});
