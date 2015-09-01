@@ -1,0 +1,10 @@
+<input type='text' ng-model='nameFilter' placeholder='Search by State Name'/>
+
+<table>
+  <tr ng-repeat='state in states | filter: searchFilter'>
+
+    <td>
+      <a href='/states/{{state.abbreviation}}'>{{state.name}}</a>
+    </td>
+  </tr>
+</table>
