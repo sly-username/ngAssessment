@@ -5,6 +5,7 @@ angular.module( 'statesApp.controllers' )
     var states = [],
       partialList,
       offsetArray = [ 0, 10, 20, 30, 40 ],
+      keyword = new RegExp( $scope.nameFilter, 'i'),
       getBatch = function() {
         offsetArray.forEach( function( index ) {
           partialList = State.query({ 'offset': index });
@@ -18,18 +19,18 @@ angular.module( 'statesApp.controllers' )
     $scope.nameFilter = null;
     $scope.states = states;
     $scope.searchFilter = function ( state ) {
-      var keyword = new RegExp( $scope.nameFilter, 'i' );
-      $scope.abbreviation = state.abbreviation;
       return !$scope.nameFilter || keyword.test( state.name ) || keyword.test( state.abbreviation );
     }
-
   }])
 
-  .controller( 'DetailController', [ '$scope', 'Detail', function( $scope, Detail ) {
-    Detail.get({ abbreviation: 'CA' }).$promise
-      .then( function( data ) {
-        $scope.name = data.name;
-        $scope.capital = data.capital;
-        $scope.population = data.population;
-      });
+  .controller( 'DetailController', [ '$scope', '$routeParams', 'Detail', function( $scope, $routeParams, Detail ) {
+    $scope.abbreviation = $routeParams.abbreviation;
+
+    $scope.getDetails = function() {
+      Detail.get({ abbreviation: $scope.abbreviation }).$promise
+        .then( function( data ) {
+          console.log( data );
+          $scope.individual = data;
+        });
+    };
   }]);

@@ -39,11 +39,14 @@ angular
 
       .state( 'states', {
         url: '/states',
+        templateUrl: 'components/states/states.view.html',
+        controller: 'StatesController',
+        authenticate: false
+      })
+
+      .state( 'states.individual', {
+        url: '/:abbreviation',
         views: {
-          '': {
-            templateUrl: 'components/states/states.view.html',
-            controller: 'StatesController'
-          },
           'individual@states': {
             templateUrl: 'components/states/states.individual.view.html',
             controller: 'DetailController'

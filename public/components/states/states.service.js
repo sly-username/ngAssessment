@@ -6,7 +6,7 @@ angular.module( 'statesApp.services' )
   })
 
   .factory( 'Detail', [ '$resource', '$scope', function( $resource, $scope ) {
-    return $resource( '/states/' + $scope.abbreviation );
+    return $resource( '/state' + $scope.abbreviation );
   }])
 
   .factory ( 'AbbrevList', [ '$resource',  function( $resource ) {
