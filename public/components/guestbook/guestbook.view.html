@@ -1,18 +1,19 @@
 <div class='default-wrapper guestbook-wrapper'>
-  <table>
-    <tr ng-repeat='guest in guestbook'>
+  <h2>Guest Book</h2>
+  <div class='guessbook-container'>
+    <div class='guestbook-entry' ng-repeat='guest in guestbook'>
 
-      <td>
-        Message: {{guest.message}}
-      </td>
-      <td>
-        User: {{guest.user}}
-      </td>
-      <td>
+      <span class='guestbook-message'>
+        {{guest.message}}
+      </span>
+      <span class='guestbook-user'>
+        Written By: {{guest.user}}
+      </span>
+      <span class='guessbook-phone'>
         Phone: {{guest.phone}}
-      </td>
-    </tr>
-  </table>
+      </span>
+    </div>
+  </div>
 
-  <div ui-view='form'></div>
+  <div class='guestbook-form' ui-view='form'></div>
 </div>

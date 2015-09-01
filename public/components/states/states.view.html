@@ -1,10 +1,12 @@
 <div class='default-wrapper states-wrapper'>
 
+  <h2>The Fifty States</h2>
+
   <input class='states-input' type='text' ng-model='nameFilter' placeholder='Search by State Name'/>
 
   <div class='states-box'>
     <ul class='states-list' ng-repeat='array in states'>
-      <li class='states-column' ng-repeat='state in array | filter: searchFilter'>
+      <li class='states-row' ng-repeat='state in array | filter: searchFilter'>
         <a href='/states/{{state.abbreviation}}' onclick='getDetails'>{{state.name}}</a>
       </li>
     </ul>

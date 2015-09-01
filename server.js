@@ -16,7 +16,8 @@ var users={
     dan: "password4"
 };
 var msgs=[
-    {user:"kilroy", phone: "123 555 1212", message:"was here!"}
+    {user:"kilroy", phone: "123.555.1212", message:"was here!"},
+    {user:"alice", phone: "555.666.1111", message:"jsdflksdjf;lsdakfj sldkfj sdlkfj lsd;akfjds;lkfjsld;kfj;sldkfjsld;k;fj;dslkfjsd;lkfjls;dkafjl;sadkjf;lsdkfj;lsdkfj;sldkfj;sldkfjs;ldkfjsdl;kfj;ldskfj;sldkfj;sdlkfjs;dlakjsa;ldfjsa;dlkj;lsdkf;sldakjs;ldkfjsl;akdjf;lsdkjf;lskdfasdf"},
 ];
 
 app.use(cookieParser());
