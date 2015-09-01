@@ -13,7 +13,7 @@ angular.module( 'statesApp.controllers' )
         });
         console.log( states );
       };
-    
+
     getBatch();
 
     $scope.nameFilter = null;

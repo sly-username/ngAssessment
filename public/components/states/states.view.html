@@ -3,7 +3,7 @@
 <table>
   <tr ng-repeat='array in states'>
 
-    <td ng-repeat='state in array'>
+    <td ng-repeat='state in array | filter: searchFilter'>
       <a href='/states/{{state.abbreviation}}'>{{state.name}}</a>
     </td>
   </tr>
