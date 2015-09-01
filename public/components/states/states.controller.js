@@ -24,13 +24,10 @@ angular.module( 'statesApp.controllers' )
   }])
 
   .controller( 'DetailController', [ '$scope', '$stateParams', 'Detail', function( $scope, $stateParams, Detail ) {
-
-    console.log( 'are you getting the controller?' );
     $scope.abbreviation = $stateParams.abbreviation;
     console.log( $stateParams.abbreviation );
 
     var individual = function() {
-      console.log( 'are you getting the controller2?' );
       Detail.get({ abbreviation: $stateParams.abbreviation }).$promise
         .then( function( data ) {
           console.log( data );

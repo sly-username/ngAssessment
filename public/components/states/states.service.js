@@ -4,8 +4,6 @@ angular.module( 'statesApp.services' )
   })
 
   .factory( 'Detail', [ '$resource', function( $resource ) {
-    console.log( 'are you getting the service?' );
-
     return $resource( '/states/:abbreviation' );
   }])
 
