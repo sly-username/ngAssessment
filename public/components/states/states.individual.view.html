@@ -1,9 +1,10 @@
 <div class='individual-state-container'>
-  individual states view
 
-  {{individual.name}}
-  {{individual.capital}}
-  {{individual.population}}
+  <h4 class=individual-name'>{{data.name}}</h4>
+  <span class='individual-details'>Capital:  {{data.capital}}</span>
+  <span class='individual-details'>Population:  {{data.population}}</span>
 
 </div>
+
+<img class='individual-img' ng-src='/images/{{lowercase}}.jpg' />
 

@@ -23,14 +23,23 @@ angular.module( 'statesApp.controllers' )
     }
   }])
 
-  .controller( 'DetailController', [ '$scope', '$routeParams', 'Detail', function( $scope, $routeParams, Detail ) {
-    $scope.abbreviation = $routeParams.abbreviation;
+  .controller( 'DetailController', [ '$scope', '$stateParams', 'Detail', function( $scope, $stateParams, Detail ) {
 
-    $scope.getDetails = function() {
-      Detail.get({ abbreviation: $scope.abbreviation }).$promise
+    console.log( 'are you getting the controller?' );
+    $scope.abbreviation = $stateParams.abbreviation;
+    console.log( $stateParams.abbreviation );
+
+    var individual = function() {
+      console.log( 'are you getting the controller2?' );
+      Detail.get({ abbreviation: $stateParams.abbreviation }).$promise
         .then( function( data ) {
           console.log( data );
-          $scope.individual = data;
+          $scope.lowercase = data.name.toLowerCase();
+          return $scope.data = data;
+        })
+        .catch( function( status ) {
+          console.log( status );
         });
     };
+    individual();
   }]);

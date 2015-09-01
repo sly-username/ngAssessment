@@ -1,17 +1,15 @@
 body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
 }
 
-
-
 h2 {
   font-size: 30px;
-  margin: 2% 0 1% ;
-  padding-left: 2%;
+  margin: 5% 0 1% 5%;
+
 }
 
 input {
@@ -40,8 +38,6 @@ button {
 }
 
 .default-wrapper {
-  padding: 30px;
-  margin: 0 auto 30px;
   color: inherit;
   background-color: #eee;
   position: absolute;
@@ -83,6 +79,8 @@ button {
   top: 136px;
   width: 50vw;
   height: 23vh;
+  padding: 30px;
+  margin: 0 auto 30px;
 }
 
 .login-container {
@@ -119,6 +117,8 @@ button {
 }
 .states-box {
   height: 28vh;
+  width: 89vw;
+  margin: 0 auto;
 }
 
 .states-list {
@@ -143,10 +143,34 @@ button {
 }
 
 .states-input {
-  width: 19%;
-  height: 28px;
-  margin: 0 0 2% 2%;
+  width: 21%;
+  height: 1.5%;
+  margin: 0 0 2% 5%;
   font-size: 18px;
+}
+
+/*individual states*/
+
+.individual-state-container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+h4 {
+  text-align: center;
+  font-size: 36px;
+  margin: 0;
+}
+
+.individual-details {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+}
+
+.individual-img {
+  display: block;
+  margin: 1% auto 3%;
 }
 
 /*guestbook*/
@@ -169,23 +193,23 @@ button {
 }
 
 .guestbook-entry {
-  width: 65vw;
+  width: 60vw;
   float: left;
   background-color: white;
-  margin: 0 0 4% 2%;
+  margin: 0 0 4% 5%;
 }
 
 .guestbook-message {
   display: inline-block;
   -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
+    word-break: break-all;
+    word-break: break-word;
   hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
   padding: 5%;
   font-size: 24px;
-  width: 59vw;
+  width: 55vw;
 }
 
 .guestbook-user, .guestbook-phone {
