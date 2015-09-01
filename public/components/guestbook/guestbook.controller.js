@@ -7,14 +7,14 @@ angular.module( 'statesApp.controllers' )
 
     $scope.savePost = function savePost() {
       Publish.create({}, { phone: $scope.telephone, message: $scope.message }).$promise
-        .then( function ( response ) {
-        $scope.message = response.message;
-        $scope.phone = response.phone;
+        .then( function () {
+        $scope.message = '';
+        $scope.phone = '';
+        $scope.guestbook = Book.query();
       })
       .catch( function ( status, data ) {
         console.log( status );
         console.log( data );
       });
     }
-
   }]);

@@ -1,20 +1,21 @@
 <div class='default-wrapper login-wrapper'>
   <h2>Login</h2>
-  <form class='login-container' role='form'>
-    <div class='form-group'>
-      <div>
-        <input type='text' class='form-input' placeholder='Username' ng-model='handle'>
-      </div>
+  <p ng-show='failedLogin' class='failedLogin help-block'>Something went wrong. Please check your credentials and try again.</p>
+  <form class='login-container' name='loginForm' role='form' novalidate>
+
+    <div class='form-group' ng-class="{ 'has-error' : loginForm.handle.$invalid && !loginForm.handle.$pristine }">
+      <input type='text' name='handle' class='form-input' placeholder='Username' ng-model='handle' required>
+      <p ng-show='loginForm.handle.$invalid && !loginForm.handle.$pristine' class='help-block'>Please enter your username.</p>
     </div>
-    <div class='form-group'>
-      <div>
-        <input type='password' class='form-input' placeholder='Password' ng-model='password'>
-      </div>
+
+    <div class='form-group' ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
+      <input type='password' name='password' class='form-input' placeholder='Password' ng-model='password' required>
+      <p ng-show='loginForm.password.$invalid && !loginForm.password.$pristine' class='help-block'>Please enter your password.</p>
     </div>
-    <div class='form-group'>
-      <div>
-        <button type='submit' class='btn' ng-click='logIn()'>Log In</button>
-      </div>
-    </div>
+
+
+    <button type='submit' class='btn' ng-disabled='loginForm.$invalid' ng-click='logIn()'>Log In</button>
+
+
   </form>
 </div>

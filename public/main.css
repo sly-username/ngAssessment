@@ -1,14 +1,13 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.42857143;
   color: #333;
   background-color: #fff;
 }
 
 h2 {
   font-size: 30px;
-  margin: 5% 0 1% 5%;
+  margin: 5% 0 2% 5%;
 
 }
 
@@ -37,6 +36,11 @@ button {
   font-size: 16px;
 }
 
+button[ disabled ] {
+  background-color:grey;
+  border: none;
+}
+
 .default-wrapper {
   color: inherit;
   background-color: #eee;
@@ -44,7 +48,7 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: auto;
+  overflow: scroll;
 }
 
 /*navigation*/
@@ -78,9 +82,10 @@ button {
 .login-wrapper {
   top: 136px;
   width: 50vw;
-  height: 23vh;
+  height: 30vh;
   padding: 30px;
   margin: 0 auto 30px;
+  overflow: hidden;
 }
 
 .login-container {
@@ -117,6 +122,7 @@ button {
 }
 .states-box {
   height: 28vh;
+  line-height: 1.5;
   width: 89vw;
   margin: 0 auto;
 }
@@ -143,7 +149,7 @@ button {
 }
 
 .states-input {
-  width: 21%;
+  width: 25%;
   height: 1.5%;
   margin: 0 0 2% 5%;
   font-size: 18px;
@@ -176,8 +182,10 @@ h4 {
 /*guestbook*/
 
 .guestbook-wrapper {
+  display: flex;
+  flex-direction: column;
   top: 5vh;
-  width: 100vw;
+  height: inherit;
 }
 
 .guestbook-form {
@@ -219,4 +227,21 @@ h4 {
 
 .guestbook-user {
   padding: 0 8% 2% 3%;
+}
+
+/*errors*/
+.help-block {
+  color: #a94442;
+}
+
+.has-error .form-input:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+
+.has-error .form-input {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
