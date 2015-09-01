@@ -11,7 +11,6 @@ angular.module( 'statesApp.controllers' )
           states.push( partialList );
 
         });
-        console.log( states );
       };
 
     getBatch();

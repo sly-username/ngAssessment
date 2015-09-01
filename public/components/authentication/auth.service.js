@@ -1,15 +1,14 @@
 angular.module( 'statesApp.services' )
-  .factory( 'Auth', [ '$state', 'User', function( $state, User ){
+  .factory( 'Auth', function(){
     var auth = {
       isLoggedIn: false
     };
 
     return auth;
-  }])
+  })
 
-  .factory( 'User', function( $resource ) {
-
+  .factory( 'User', [ '$resource', function( $resource ) {
     return $resource(
       '/login'
     );
-  });
+  }]);

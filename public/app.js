@@ -22,13 +22,6 @@ angular
     $stateProvider
 
       // todo change the authentication stuff back to true
-      .state( 'home', {
-        url: '/home',
-        templateUrl: 'components/home/home.view.html',
-        controller: 'HomeController',
-        authenticate: false
-      })
-
       .state( 'guestbook', {
         url: '/guestbook',
         views: {
@@ -75,11 +68,11 @@ angular
   })
 
   //todo revert to login page if not logged in and trying to change routes
-  .run(function ($rootScope, $state, Auth ) {
-    $rootScope.$on('$stateChangeStart',
-      function(event, toState, toParams, fromState, fromParams) {
-        if (toState.authenticate && !Auth.isLoggedIn ) {
-          $state.go('login');
+  .run( function ( $rootScope, $state, Auth ) {
+    $rootScope.$on( '$stateChangeStart',
+      function( event, toState, toParams, fromState, fromParams ) {
+        if ( toState.authenticate && !Auth.isLoggedIn ) {
+          $state.go( 'login' );
           event.preventDefault();
         }
       })
