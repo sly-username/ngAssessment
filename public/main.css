@@ -1,0 +1,143 @@
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
+
+
+h2 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+
+input {
+  display: block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #428bca;
+  border-color: #357ebd;
+  color: white;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 8px 18px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+}
+
+.default-wrapper {
+  padding: 30px;
+  margin: 0 auto 30px;
+  color: inherit;
+  background-color: #eee;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+}
+
+/*navigation*/
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 5vh;
+  overflow: visible;
+  background-color: #333;
+}
+
+.nav-menu {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+  float: right;
+  width: 10vw;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none !important;
+}
+
+/*login*/
+
+.login-wrapper {
+
+  top: 136px;
+  width: 50vw;
+  height: 23vh;
+}
+
+.login-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 96%;
+  height: 34px;
+}
+
+
+/*states*/
+
+.states-wrapper {
+  top: 5vh;
+  width: 100vw;
+}
+
+.states-list {
+  list-style-type: none;
+  font-size: 18px;
+}
+
+.states-column {
+  float: left;
+  width: 17vw;
+  margin: 0;
+  padding: 0;
+}
+
+.states-input {
+  width: 19%;
+  height: 28px;
+  margin-bottom: 4vh;
+}
+
+/*guestbook*/
+
+.guestbook-wrapper {
+  top: 5vh;
+  width: 100vw;
+}

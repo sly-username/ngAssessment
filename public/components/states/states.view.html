@@ -1,10 +1,14 @@
-<input type='text' ng-model='nameFilter' placeholder='Search by State Name'/>
+<div class='default-wrapper states-wrapper'>
 
-<table>
-  <tr ng-repeat='array in states'>
+  <input class='states-input' type='text' ng-model='nameFilter' placeholder='Search by State Name'/>
 
-    <td ng-repeat='state in array | filter: searchFilter'>
+  <ul class='states-list' ng-repeat='array in states'>
+
+    <li class='states-column' ng-repeat='state in array | filter: searchFilter'>
       <a href='/states/{{state.abbreviation}}'>{{state.name}}</a>
-    </td>
-  </tr>
-</table>
+    </li>
+  </ul>
+
+</div>
+
+

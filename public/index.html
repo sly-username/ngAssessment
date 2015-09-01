@@ -4,6 +4,7 @@
   <meta charset='UTF-8'>
   <base href='/'>
   <title>Murica</title>
+  <link rel='stylesheet' href='main.css' />
   <script src='bower_components/angular/angular.js'></script>
   <script src='bower_components/angular-resource/angular-resource.js'></script>
   <script src='bower_components/angular-ui-router/release/angular-ui-router.js'></script>
@@ -14,11 +15,9 @@
 
 <nav class='navbar' role='navigation'>
   <ul class='nav navbar-nav'>
-    <li><a ui-sref='home'>Home</a></li>
-    <li><a ui-sref='states'>States</a></li>
-    <li><a ui-sref='guestbook'>Guest Book</a></li>
-    <li><a ui-sref='login'>Login</a></li>
-    <li><a ui-sref='logout'>Log Out</a></li>
+    <li class='nav-menu'><a ui-sref='logout'>Log Out</a></li>
+    <li class='nav-menu'><a ui-sref='guestbook'>Guest Book</a></li>
+    <li class='nav-menu'><a ui-sref='states'>States</a></li>
   </ul>
 </nav>
 
@@ -30,7 +29,6 @@
 
 <script src='components/authentication/auth.controller.js'></script>
 <script src='components/authentication/auth.service.js'></script>
-<script src='components/home/home.controller.js'></script>
 <script src='components/guestbook/guestbook.controller.js'></script>
 <script src='components/guestbook/guestbook.service.js'></script>
 <script src='components/states/states.controller.js'></script>
