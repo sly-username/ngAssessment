@@ -116,6 +116,9 @@ button {
   top: 5vh;
   width: 100vw;
 }
+.states-box {
+  height: 28vh;
+}
 
 .states-list {
   list-style-type: none;

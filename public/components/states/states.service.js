@@ -1,12 +1,16 @@
 angular.module( 'statesApp.services' )
   .factory( 'State', function( $resource ){
     return $resource(
-      '/states/:abbreviation',
-      { abbreviation: '@abbreviation' }
+      '/states/:abbreviation'
     );
   })
-  .factory ( 'AbbrevList', function( $resource ) {
-  return $resource(
-    '/states/abbreviations'
-  )
-});
+
+  .factory( 'Detail', [ '$resource', '$scope', function( $resource, $scope ) {
+    return $resource( '/states/' + $scope.abbreviation );
+  }])
+
+  .factory ( 'AbbrevList', [ '$resource',  function( $resource ) {
+    return $resource(
+      '/states/abbreviations'
+    )
+  }]);

@@ -2,13 +2,16 @@
 
   <input class='states-input' type='text' ng-model='nameFilter' placeholder='Search by State Name'/>
 
-  <ul class='states-list' ng-repeat='array in states'>
+  <div class='states-box'>
+    <ul class='states-list' ng-repeat='array in states'>
+      <li class='states-column' ng-repeat='state in array | filter: searchFilter'>
+        <a href='/states/{{state.abbreviation}}' onclick='getDetails'>{{state.name}}</a>
+      </li>
+    </ul>
+  </div>
 
-    <li class='states-column' ng-repeat='state in array | filter: searchFilter'>
-      <a href='/states/{{state.abbreviation}}'>{{state.name}}</a>
-    </li>
-  </ul>
 
+  <div ui-view='individual'></div>
 </div>
 
 

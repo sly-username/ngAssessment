@@ -46,7 +46,7 @@ angular
           },
           'individual@states': {
             templateUrl: 'components/states/states.individual.view.html',
-            controller: 'StatesController'
+            controller: 'DetailController'
           }
         },
         authenticate: false
