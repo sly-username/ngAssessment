@@ -34,7 +34,7 @@ angular
             controller: 'GuestbookController'
           }
         },
-        authenticate: true
+        authenticate: false
       })
 
       .state( 'states', {

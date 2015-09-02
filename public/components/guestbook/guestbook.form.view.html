@@ -1,6 +1,6 @@
 <span>Leave a Message in Our Guest Book!</span>
 
-<form class='guestbook-inputs' name='guestbookForm'  role='form' novalidate>
+<form class='guestbook-inputs' name='guestbookForm' role='form' ng-submit='savePost()' novalidate>
 
   <div class='form-group' ng-class="{ 'has-error' : guestbookForm.tel.$invalid && !guestbookForm.tel.$pristine }">
     <input type='tel' name='tel' class='form-input' placeholder='Phone Number' ng-model='telephone' required>
@@ -12,6 +12,6 @@
     <p ng-show='guestbookForm.message.$invalid && !guestbookForm.message.$pristine' class='help-block'>A message is required.</p>
   </div>
 
-  <button type='submit' class='btn' ng-disabled='guestbookForm.$invalid' ng-click='savePost()'>Save</button>
+  <button type='submit' class='btn' ng-disabled='guestbookForm.$invalid'>Save</button>
 
 </form>
