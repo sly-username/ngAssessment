@@ -41,7 +41,7 @@ angular
         url: '/states',
         templateUrl: 'components/states/states.view.html',
         controller: 'StatesController',
-        authenticate: false
+        authenticate: true
       })
 
       .state( 'states.individual', {
@@ -52,7 +52,7 @@ angular
             controller: 'DetailController'
           }
         },
-        authenticate: false
+        authenticate: true
       })
 
       .state( 'login', {
@@ -66,7 +66,7 @@ angular
         url: '/logout',
         templateUrl: 'components/authentication/logout.view.html',
         controller: 'AuthController',
-        authenticate: false
+        authenticate: true
       })
   })
 

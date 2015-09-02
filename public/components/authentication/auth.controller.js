@@ -12,8 +12,10 @@ angular.module( 'statesApp.controllers' )
             $location.path( '/states' );
           }).catch( function( status, data ) {
             Auth.isLoggedIn = false;
+            $scope.failedLogin = true;
             console.log( status );
             console.log( data );
+
           });
       }
     };
