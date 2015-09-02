@@ -1,5 +1,6 @@
 ##### What libraries did you use to write your application?
 - None.
+- Well, I used Angular. Not sure if you're including frameworks in your definition of "library". 
 
 ##### What influenced the design of your user interface?
 - To be honest, I used the similar bootstrap design found in most angular tutorials. But I didn't use bootstrap since there weren't that many views and I did not make the design very complicated. 
