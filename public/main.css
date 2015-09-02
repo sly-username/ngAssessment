@@ -48,7 +48,6 @@ button[ disabled ] {
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: scroll;
 }
 
 /*navigation*/
@@ -192,12 +191,13 @@ h4 {
   float: right;
   width: 34vw;
   position: absolute;
-  top: 9%;
-  left: 72%;
+  top: 7%;
+  left: 67%;
 }
 
 .guestbook-inputs {
-  margin-top: 4%;
+  margin-top: 6%;
+  width: 88%;
 }
 
 .guestbook-entry {
