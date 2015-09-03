@@ -1,22 +1,21 @@
+##### What libraries did you use to write your application?
+- None.
 
-# Frontend Developer Test
+##### What influenced the design of your user interface?
+- To be honest, I used the similar bootstrap design found in most angular tutorials. But I didn't use bootstrap since there weren't that many views and I did not make the design very complicated. 
 
-Please fork this repository to begin your front end developer test, then download your repository and follow the installation instructions.
+##### What steps did you take to make your application user friendly?
+- I wanted the application to be as simple as possible, but still make the features obvious enough so that the user does not overlook anything. 
+- Colors, fonts, layout, I tried to make as consistent as possible.
+- I added validation for the login form and guestbook entry creation form. 
+- Unfortunately, the application is not responsive. I want to continue working on that. 
 
-# Installation
-Installation requires node.js on your computer
+##### What steps did you take to insure your application was secure?
+- I cannot say I can ensure that the application is secure at this point. Other than the suggestions listed below, I do not have much experience with security. Although I am interested in this topic. 
+- For now, I added a basic layer of security. The user needs authorization to view the application, excluding the login view, of course. 
 
-npm install
-
-node server.js
-
-# Instructions
-There should now be a web server running at http://localhost:8888
-Follow the instructions displayed on that webpage.
-
-The node server provides everything you need for the back end of the test. You are welcome to look at the server code, but you should not need to modify anything to make your front end work. All of your code should be placed in the public directory in this project. The node server will act as the web server for your front end application.
-
-Please insure that your code runs properly with the node server. Test all the features and make sure that no Javascript errors are generated.
-
-Thank you
-
+##### What could be done to the front end or back end to make it more secure?
+- Regarding the server side application, I am not sure. Maybe add more server side validation?
+- But regarding the client side, I would like to add token based authentication instead of using cookies. 
+- Additionally, I believe I can remedy the automatically-log-out-on-refresh problem with tokens. But I was not able to get to this yet. 
+- Also, if the application ends up allowing user to create accounts, I would like to include requirements for password creation and hash the passwords instead of storing them in plain text. Also, I wouldn't hard code any of the passwords in the server.js file, obviously.
